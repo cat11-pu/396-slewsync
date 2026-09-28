@@ -1,12 +1,18 @@
-// clock.js：偏移、缓行走一步与要不要跳变（基线：一律给零与假）
+// clock.js：偏移、缓行走一步与要不要跳变
 export function offsetOf(at, ref) {
-  return 0;
+  return ref - at;
 }
 
 export function stepOf(at, ref, slew) {
-  return at;
+  if (at < ref) {
+    return Math.min(at + slew, ref);
+  }
+  if (at > ref) {
+    return Math.max(at - slew, ref);
+  }
+  return ref;
 }
 
 export function jumpOf(offset, jump) {
-  return false;
+  return Math.abs(offset) >= jump;
 }
