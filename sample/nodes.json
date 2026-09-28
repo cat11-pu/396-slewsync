@@ -1,0 +1,20 @@
+{
+  "budget": 2,
+  "jump": 5,
+  "slew": 2,
+  "bad_name_code": "E_BAD_NAME",
+  "bad_at_code": "E_BAD_AT",
+  "bad_ref_code": "E_BAD_REF",
+  "dup_code": "E_DUP_NAME",
+  "no_node_code": "E_NO_NODE",
+  "event_error_code": "E_BAD_EVENT",
+  "state": { "nodes": [], "syncs": [], "jumps": 0, "slews": 0, "ledger": [], "applied": [] },
+  "events": [
+    { "id": 1, "kind": "add", "name": "a", "at": 0 },
+    { "id": 2, "kind": "add", "name": "b", "at": 10 },
+    { "id": 3, "kind": "sync", "name": "a", "ref": 3 },
+    { "id": 4, "kind": "sync", "name": "a", "ref": 3 },
+    { "id": 5, "kind": "sync", "name": "b", "ref": 30 },
+    { "id": 6, "kind": "sync", "name": "a", "ref": 0 }
+  ]
+}
